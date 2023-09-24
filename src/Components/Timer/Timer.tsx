@@ -2,6 +2,7 @@ import React, { ReducerAction, useEffect, useState } from 'react';
 import './Timer.module.scss';
 import { useAppDispatch, useAppSelector } from '../../hooks/redux';
 import { timerSlice } from '../../store/reducers/TimerSlice';
+import styles from './Timer.module.scss';
 
 export function Timer() {
     const [seconds, setSeconds] = useState(0);
@@ -41,10 +42,10 @@ export function Timer() {
 
     return(
         <React.Fragment>
-            <div className='timer-container'>
+            <div className={styles.timer}>
                 {hoursString}:{minutesString}:{secondsString}
             </div>
-            <button type='button' className="toggle" onClick={onToggle}>
+            <button type='button' className={styles.toggle} onClick={onToggle}>
                 {timerOn ? 'Остановить' : 'Запустить'}
             </button>
         </React.Fragment>
