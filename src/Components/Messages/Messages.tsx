@@ -1,9 +1,11 @@
 import React from 'react';
-import { useAppSelector } from '../../hooks/redux'
-import styles from './Messages.module.scss'
 
-export function Messages() {
-    const messages = useAppSelector(state => state.messageReducer.messages)
+import { useAppSelector } from '../../hooks/redux';
+
+import styles from './Messages.module.scss';
+
+export const Messages = () => {
+    const messages = useAppSelector(state => state.messageReducer.messages);
     return (
         <ul className={styles.messages}>
             {messages.map((message: string) => 
@@ -11,5 +13,5 @@ export function Messages() {
             )}
         </ul>
         
-    )
-}
+    );
+};

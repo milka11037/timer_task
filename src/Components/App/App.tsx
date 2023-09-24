@@ -1,11 +1,12 @@
 import React from 'react';
-import './App.module.scss';
-import { Timer } from '../Timer/Timer';
-import { Messages } from '../Messages/Messages'
-import { Form } from '../Form/Form'
-import styles from '../App/App.module.scss'
 
-function App() {
+import { Timer } from '../Timer/Timer';
+import { Messages } from '../Messages/Messages';
+import { Form } from '../Form/Form';
+
+import styles from './App.module.scss';
+
+const App = () => {
   return (
     <div className={styles.app}>
       <Form/>
@@ -13,6 +14,6 @@ function App() {
       <Messages/>
     </div>
   );
-}
+};
 
 export default App;

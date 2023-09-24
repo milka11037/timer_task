@@ -1,0 +1,84 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "ignorePatterns": ["node_modules", "dist", "build", "idea"],
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:import/errors",
+        "plugin:import/warnings",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "overrides": [
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "project": "./tsconfig.json",
+        "sourceType": "module",
+        "requireConfigFile": false,
+        "babelOptions": {
+            "parserOpts": {
+                "plugins": ["jsx"]
+            }
+        },
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "parser": "@typescript-eslint/parser",
+    "plugins": ["react", "import", "jsx-a11y", "@typescript-eslint"],
+    "rules": {
+        "array-callback-return": "off",
+        "class-methods-use-this": "off",
+        "consistent-return": "off",
+        "default-param-last": "off",
+        "import/named": "off",
+        "import/no-unresolved": "off",
+        "dot-notation": "off",
+        "linebreak-style": [0, "unix"],
+        "quotes": ["error", "single"],
+        "semi": ["error", "always"],
+        "import/prefer-default-export": "off",
+        "no-underscore-dangle": "off",
+        "no-use-before-define": "off",
+        "no-param-reassign": "off",
+        "lines-between-class-members": "off",
+        "react/react-in-jsx-scope": "off",
+        "react/prop-types": 0,
+        "react/state-in-constructor": "off",
+        "react/static-property-placement": "off",
+        "react/jsx-props-no-spreading": "off",
+        "react/jsx-filename-extension": [1, { "extensions": ["ts", "tsx"] }],
+        "react/function-component-definition": [2, {
+            "namedComponents": "arrow-function",
+            "unnamedComponents": "arrow-function"
+        }],
+        "no-plusplus": "off",
+        "import/order": [
+            2,
+            {
+                "groups": [
+                    "builtin",
+                    "external",
+                    "internal",
+                    "parent",
+                    "sibling",
+                    "index"
+                ],
+                "newlines-between": "always"
+            }
+        ]
+    },
+    "settings": {
+        "version": "detect",
+        "import/resolver": {
+            "node": {
+                "extensions": [".ts", ".tsx"],
+                "moduleDirectory": ["node_modules", "src/"],
+                "eslint-import-resolver-typescript": true
+            }
+        }
+    }
+}

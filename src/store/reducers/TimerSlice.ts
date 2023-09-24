@@ -1,4 +1,4 @@
-import { PayloadAction, createSlice } from "@reduxjs/toolkit";
+import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 
 interface Timer {
     messages: string[];
@@ -8,7 +8,7 @@ interface Timer {
 const initialState: Timer = {
     messages: [],
     interval: 2,
-}
+};
 
 export const timerSlice = createSlice({
     name: 'message',
@@ -22,6 +22,6 @@ export const timerSlice = createSlice({
             state.interval = action.payload;
         }
     }
-})
+});
 
 export default timerSlice.reducer;
